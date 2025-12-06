@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Краснодар</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Разноцветный градиентный фон как на главной странице */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #ff6b6b,  /* Красный */
+                #ffa726,  /* Оранжевый */
+                #ffee58,  /* Желтый */
+                #66bb6a,  /* Зеленый */
+                #42a5f5,  /* Голубой */
+                #5c6bc0,  /* Синий */
+                #ab47bc   /* Фиолетовый */
+            );
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Анимация движения градиента */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Стили для контента */
+        main {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Навигационное меню */
+        nav {
+            background: linear-gradient(90deg, #2c3e50, #4a6491);
+            padding: 15px 0;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Подвал */
+        footer {
+            background: linear-gradient(90deg, #2c3e50, #4a6491);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+
+        /* Заголовок */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 36px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #42a5f5;
+        }
+
+        /* Стили для галереи */
+        .actor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 0;
+            margin: 0;
+        }
+        
+        .actor img {
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s ease;
+            border: 6px solid white;
+            object-fit: cover;
+            height: 250px;
+            width: 200px;
+        }
+        
+        .actor img:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            border-color: #42a5f5;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Контейнер для изображений */
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        /* Описание под фотографиями */
+        .image-description {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 16px;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            max-width: 200px;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .actor {
+                gap: 20px;
+            }
+            
+            .actor img {
+                width: 150px;
+                height: 200px;
+            }
+            
+            main {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигационное меню - ОДИНАКОВОЕ НА ВСЕХ СТРАНИЦАХ -->
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Главня</a></li>
+                <li><a href="about.html">История</a></li>
+                <li><a href="cast.html">Фото</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Фотогалерея г. Краснодар</h1>
+        
+        <div class="gallery-container">
+            <div class="actor clearfix">
+                <div class="image-item">
+                    <img src="images/1111.jpg" alt="Достопримечательность Краснодара" width="200">
+                    <div class="image-description">Улица Красная</div>
+                </div>
+                
+                <div class="image-item">
+                    <img src="images/2222.jpg" alt="Достопримечательность Краснодара" width="200">
+                    <div class="image-description">Фонтан "Аврора"</div>
+                </div>
+                
+                <div class="image-item">
+                    <img src="images/3333.jpg" alt="Достопримечательность Краснодара" width="200">
+                    <div class="image-description">Памятник "Казаки"</div>
+                </div>
+                
+                <div class="image-item">
+                    <img src="images/4444.jpg" alt="Достопримечательность Краснодара" width="200">
+                    <div class="image-description">Набережная реки Кубань</div>
+                </div>
+                
+                <div class="image-item">
+                    <img src="images/5555.jpg" alt="Достопримечательность Краснодара" width="200">
+                    <div class="image-description">Центральный парк</div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>MW</p>
+    </footer>
+
+</body>
+</html>

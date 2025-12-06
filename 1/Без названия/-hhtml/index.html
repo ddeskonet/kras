@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    
+    <!-- Подключение таблицы стилей -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Разноцветный градиентный фон */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #ff6b6b,  /* Красный */
+                #ffa726,  /* Оранжевый */
+                #ffee58,  /* Желтый */
+                #66bb6a,  /* Зеленый */
+                #42a5f5,  /* Голубой */
+                #5c6bc0,  /* Синий */
+                #ab47bc   /* Фиолетовый */
+            );
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Анимация движения градиента */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Стили для контента */
+        main {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Навигационное меню */
+        nav {
+            background: linear-gradient(90deg, #2c3e50, #4a6491);
+            padding: 15px 0;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Подвал */
+        footer {
+            background: linear-gradient(90deg, #2c3e50, #4a6491);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Дополнительные стили для улучшения читаемости */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            line-height: 1.7;
+            color: #333;
+            font-size: 17px;
+        }
+
+        img {
+            display: block;
+            margin: 25px auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 5px solid white;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Навигационное меню - ОДИНАКОВОЕ НА ВСЕХ СТРАНИЦАХ -->
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Главня</a></li>
+                <li><a href="about.html">История</a></li>
+                <li><a href="cast.html">Фото</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основное содержание страницы - УНИКАЛЬНОЕ ДЛЯ КАЖДОЙ СТРАНИЦЫ -->
+    <main>
+        <h1>Краснодар</h1>
+        <p>Краснодар — южная столица России и столица Кубани с населением более миллиона человек. Это крупный экономический центр, известный промышленностью и агробизнесом. Климат здесь тёплый и мягкий. Город энергичный и зелёный, с комфортной атмосферой для жизни. Главные достопримечательности — широкая улица Красная, фонтан "Аврора", памятник "Казаки" и современные парки с набережной.</p>
+        <img src="images/5555.jpg" alt="Постер фильма Назад в будущее" width="200">
+    </main>
+
+    <!-- Подвал - ОДИНАКОВЫЙ НА ВСЕХ СТРАНИЦАХ -->
+    <footer>
+
+        <p>MW</p>
+        
+    </footer>
+
+</body>
+</html>

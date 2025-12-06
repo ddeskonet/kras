@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>История Краснодара</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Разноцветный градиентный фон как на главной странице */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+                #ff6b6b,  /* Красный */
+                #ffa726,  /* Оранжевый */
+                #ffee58,  /* Желтый */
+                #66bb6a,  /* Зеленый */
+                #42a5f5,  /* Голубой */
+                #5c6bc0,  /* Синий */
+                #ab47bc   /* Фиолетовый */
+            );
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Анимация движения градиента */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Навигационное меню */
+        nav {
+            background: linear-gradient(90deg, #2c3e50, #4a6491);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Стили для основного содержимого */
+        main {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            flex-grow: 1;
+        }
+
+        /* Заголовок */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 36px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #42a5f5;
+        }
+
+        /* Стили для блока с историей */
+        .actor {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .actor img {
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border: 6px solid white;
+            min-width: 300px;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .actor-info {
+            flex: 1;
+        }
+
+        .actor-info h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-left: 5px solid #ff6b6b;
+            padding-left: 15px;
+        }
+
+        .actor-info p {
+            color: #333;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .actor-info strong {
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        /* Подвал */
+        footer {
+            background: linear-gradient(90deg, #2c3e50, #4a6491);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 18px;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        /* Дополнительные стили для оформления текста */
+        .highlight {
+            background: linear-gradient(90deg, #ff6b6b, #ffa726);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .fact-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-left: 5px solid #42a5f5;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .fact-title {
+            color: #1565c0;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .actor {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .actor img {
+                min-width: 100%;
+                max-width: 100%;
+            }
+            
+            main {
+                margin: 20px;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .actor-info h2 {
+                font-size: 24px;
+            }
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">История</a></li>
+                <li><a href="cast.html">Фото</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>История города Краснодар</h1>
+        
+        <div class="actor clearfix">
+            <img src="images/1111.jpg" alt="Основание Краснодара в 1793" width="300">
+            <div class="actor-info">
+                <h2>Краснодар</h2>
+                <p><strong>Общая информация</strong></p>
+                <p>Краснодар — это крупный город на юге России, административный центр Краснодарского края, который неофициально называют «южной столицей» страны. Город был основан в 1793 году как крепость Екатеринодар, получив свое название в честь императрицы Екатерины II, и лишь в 1920 году был переименован в Краснодар.</p>
+                
+                <div class="fact-box">
+                    <div class="fact-title">Интересный факт</div>
+                    <p>Название "Екатеринодар" буквально означает "Дар Екатерины", так как императрица Екатерина II пожаловала эти земли черноморским казакам за верную службу.</p>
+                </div>
+                
+                <p>Сегодня это современный миллионник с населением более 1,1 миллиона человек, важный экономический, транспортный и культурный центр Южного федерального округа.</p>
+                
+                <p>Экономика Краснодара отличается разнообразием: здесь развиты агропромышленный комплекс, пищевая промышленность, машиностроение, энергетика и торговля. В городе расположены штаб-квартиры крупных компаний, таких как «Агрокомплекс» имени Ткачева, а также заводы международных корпораций, включая «КЛААС» и «Cargill».</p>
+                
+                <p><span class="highlight">Краснодар является ключевым транспортным узлом</span>, связывающим курорты Черноморского побережья с центральными регионами России, через него проходят федеральная трасса М-4 «Дон» и железнодорожные линии, а также действует международный аэропорт.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>MW</p>
+    </footer>
+
+</body>
+</html>
